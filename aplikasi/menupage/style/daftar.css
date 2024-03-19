@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Archivo+Black&family=Bebas+Neue&display=swap');
+
+:root {
+  --bg: #ece3ce;
+  --primary: #739072;
+  --secondary: #4f6f52;
+  --third: #3a4d39;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Bebas Neue';
+  letter-spacing: 0.1rem;
+  list-style: none;
+}
+
+body {
+  background-color: var(--bg);
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  align-items: start;
+  justify-content: left;
+  text-align: start;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+nav svg {
+  color: white;
+}
+
+/* akhir top */
+.search-bar {
+  margin-bottom: 3rem;
+}
+
+/* tabel */
+#itemList {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}

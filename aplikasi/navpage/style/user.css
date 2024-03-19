@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Archivo+Black&family=Bebas+Neue&display=swap');
+
+:root {
+  --bg: #ece3ce;
+  --primary: #739072;
+  --secondary: #4f6f52;
+  --third: #3a4d39;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Bebas Neue';
+  letter-spacing: 0.1rem;
+}
+
+body {
+  padding: 0.3rem 1rem;
+  background: var(--bg);
+  min-height: 100vh;
+  /* height: 100rem; */
+  display: flex;
+  flex-direction: column;
+}
+
+/* navbar */
+nav {
+  background-color: var(--secondary);
+  border-radius: 50px;
+  position: fixed;
+  bottom: 2%;
+  width: 92%;
+  filter: drop-shadow(0px 3px 2px black);
+  z-index: 999;
+}
+
+nav .navbar-nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 0.1rem 1rem;
+}
+
+nav .navbar-nav a img {
+  width: 1.8rem;
+  height: auto;
+}
+
+nav .navbar-nav a {
+  padding: 0.4rem;
+  border-radius: 100%;
+  transform: translateY(0);
+  transition: 0.5s all;
+}
+
+nav .navbar-nav .nav-menu3 {
+  animation: nav 1.5s alternate;
+}
+
+nav .navbar-nav a.active {
+  background-color: var(--primary);
+  border-radius: 100%;
+  filter: drop-shadow(0px 5px 3px black);
+  transform: translateY(-1rem);
+}
+nav .navbar-nav a:focus {
+  background-color: var(--primary);
+  border-radius: 100%;
+  filter: drop-shadow(0px 5px 3px black);
+  transform: translateY(-1rem);
+}
+
+nav .navbar-nav a:hover {
+  background-color: var(--primary);
+  border-radius: 100%;
+}
+
+@keyframes nav {
+  from {
+    padding: 0.4rem;
+    border-radius: 100%;
+    transform: translateY(0);
+  }
+  to {
+    background-color: var(--primary);
+    border-radius: 100%;
+    filter: drop-shadow(0px 5px 3px black);
+    transform: translateY(-1rem);
+  }
+}
+
+/* bottom navbar end */
+
+/* header start */
+.profile {
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile .top-profile {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 5rem;
+  height: 8rem;
+  width: 8rem;
+  background-color: #739072;
+  border-radius: 50%;
+  border: 0.1rem solid black;
+}
+
+.profile .top-profile img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.profile .user-data {
+  text-align: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  border: 0.1rem solid;
+  border-radius: 1rem;
+  padding: 2rem;
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.642));
+  /* backdrop-filter: drop-shadow(2px 2px 3px black); */
+}
+
+.profile .user-data form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile .user-data form label {
+  border-bottom: 0.1rem solid;
+}
+
+.profile .user-data form .btn {
+  border: 0.1rem solid;
+  transition: 0.3s all;
+}
+
+.profile .user-data form .btn:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.profile .user-data form button a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.profile .user-data form .btn:hover a {
+  color: white;
+}
+
+/* header end */
+
+/* responsive */
+@media (max-width: 600px) {
+  /* header start */
+  header .head a {
+    background-color: var(--primary);
+    position: relative;
+    right: 35%;
+    border-radius: 0px 20px 20px 0px;
+    padding: 0.1rem 0.3rem 0.1rem 4rem;
+    filter: drop-shadow(0px 2px 3px black);
+    transition: 0.4s;
+    animation: info alternate 1.5s infinite;
+  }
+
+  .main .container .menu-card:hover span {
+    opacity: 1;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 430px) {
+  .main .container .menu-card:hover span {
+    opacity: 1;
+    margin-left: 2.5rem;
+    font-size: 1.5rem;
+  }
+}
